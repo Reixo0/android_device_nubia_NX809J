@@ -8,7 +8,7 @@
     repo init -u https://github.com/Evolution-X/manifest -b cnb   (plus the git-lfs flag: EvoX needs it)
     mkdir -p .repo/local_manifests
     curl -Lo .repo/local_manifests/nx809j.xml \
-      https://raw.githubusercontent.com/IronShing/android_device_nubia_NX809J/nx809j-evo12/manifest/nx809j.xml
+      https://raw.githubusercontent.com/Reixo0/android_device_nubia_NX809J/nx809j-evo12/manifest/nx809j.xml
     repo sync -j8
     bash device/nubia/NX809J/patches/a17/apply-a17-patches.sh   # 7 small fixes in un-forked repos
     source build/envsetup.sh
@@ -26,13 +26,13 @@
 -->
 <manifest>
   <!-- ===== Device ===== -->
-  <project name="IronShing/android_device_nubia_NX809J"
+  <project name="Reixo0/android_device_nubia_NX809J"
            path="device/nubia/NX809J" remote="github" revision="nx809j-evo12" />
   <!-- Prebuilt GKI kernel Image + DTB/DTBO (6.12.38, KSUN+SuSFS); no from-source kernel build -->
-  <project name="IronShing/android_kernel_nubia_NX809J"
+  <project name="Reixo0/android_kernel_nubia_NX809J"
            path="device/nubia/NX809J-kernel" remote="github" revision="lineage-23" />
   <!-- Vendor blobs (the device rides the stock /vendor partition, this is the build-time view) -->
-  <project name="IronShing/android_vendor_nubia_NX809J"
+  <project name="Reixo0/android_vendor_nubia_NX809J"
            path="vendor/nubia/NX809J" remote="github" revision="nx809j-sourcedisplay" />
 
   <!-- ===== Display: sm8850 source at the sm8750 path =====
@@ -44,78 +44,78 @@
        NX809J commit on top. -->
   <remove-project name="LineageOS/android_vendor_qcom_opensource_display-core"
                   path="hardware/qcom-caf/sm8750/display/core" />
-  <project name="IronShing/hardware_qcom-caf_sm8850_display_core"
+  <project name="Reixo0/hardware_qcom-caf_sm8850_display_core"
            path="hardware/qcom-caf/sm8750/display/core"
            remote="github" revision="nx809j-evo12" groups="qcom" />
 
   <remove-project name="LineageOS/android_hardware_qcom_display"
                   path="hardware/qcom-caf/sm8750/display/hal" />
-  <project name="IronShing/hardware_qcom-caf_sm8850_display_hal"
+  <project name="Reixo0/hardware_qcom-caf_sm8850_display_hal"
            path="hardware/qcom-caf/sm8750/display/hal"
            remote="github" revision="nx809j-evo12" groups="qcom" />
 
   <remove-project name="LineageOS/android_vendor_qcom_opensource_display-intf"
                   path="hardware/qcom-caf/sm8750/display/intf" />
-  <project name="IronShing/hardware_qcom-caf_sm8850_display_intf"
+  <project name="Reixo0/hardware_qcom-caf_sm8850_display_intf"
            path="hardware/qcom-caf/sm8750/display/intf"
            remote="github" revision="nx809j-evo123" groups="qcom" />
 
   <!-- ===== Evolution X forks (rebased on cnb) ===== -->
   <remove-project name="frameworks_base" path="frameworks/base" />
-  <project name="IronShing/frameworks_base"
+  <project name="Reixo0/frameworks_base"
            path="frameworks/base" remote="github" revision="nx809j-evo123-1009" groups="pdk-cw-fs,pdk-fs,sysui-studio" />
 
   <remove-project name="frameworks_av" path="frameworks/av" />
-  <project name="IronShing/frameworks_av"
+  <project name="Reixo0/frameworks_av"
            path="frameworks/av" remote="github" revision="nx809j-evo123" groups="pdk,sysui-studio" />
 
   <!-- GPP surface extension (libgui), BufferReleaseChannel hang fix -->
   <remove-project name="frameworks_native" path="frameworks/native" />
-  <project name="IronShing/frameworks_native"
+  <project name="Reixo0/frameworks_native"
            path="frameworks/native" remote="github" revision="nx809j-evo123" groups="pdk" />
 
   <remove-project name="frameworks_opt_telephony" path="frameworks/opt/telephony" />
-  <project name="IronShing/frameworks_opt_telephony"
+  <project name="Reixo0/frameworks_opt_telephony"
            path="frameworks/opt/telephony" remote="github" revision="nx809j-evo123" groups="pdk,sysui-studio" />
 
   <remove-project name="packages_apps_Settings" path="packages/apps/Settings" />
-  <project name="IronShing/packages_apps_Settings"
+  <project name="Reixo0/packages_apps_Settings"
            path="packages/apps/Settings" remote="github" revision="nx809j-evo123-1009" groups="pdk-fs,pdk-cw-tvc,sysui-studio" />
 
   <remove-project name="packages_apps_GameSpace" path="packages/apps/GameSpace" />
-  <project name="IronShing/packages_apps_GameSpace"
+  <project name="Reixo0/packages_apps_GameSpace"
            path="packages/apps/GameSpace" remote="github" revision="nx809j-evo123" />
 
   <remove-project name="lineage-sdk" path="lineage-sdk" />
-  <project name="IronShing/lineage-sdk"
+  <project name="Reixo0/lineage-sdk"
            path="lineage-sdk" remote="github" revision="nx809j-evo123-1009" />
 
   <remove-project name="vendor_extras" path="vendor/extras" />
-  <project name="IronShing/vendor_extras"
+  <project name="Reixo0/vendor_extras"
            path="vendor/extras" remote="github" revision="nx809j-evo123" />
 
   <remove-project name="vendor_evolution" path="vendor/lineage" />
-  <project name="IronShing/android_vendor_lineage"
+  <project name="Reixo0/android_vendor_lineage"
            path="vendor/lineage" remote="github" revision="nx809j-evo123-1009" />
 
   <!-- ===== LineageOS / AOSP forks ===== -->
   <remove-project name="LineageOS/android_hardware_lineage_interfaces" path="hardware/lineage/interfaces" />
-  <project name="IronShing/android_hardware_lineage_interfaces"
+  <project name="Reixo0/android_hardware_lineage_interfaces"
            path="hardware/lineage/interfaces" remote="github" revision="nx809j-evo123" />
 
   <remove-project name="platform/packages/apps/CarrierConfig" path="packages/apps/CarrierConfig" />
-  <project name="IronShing/android_packages_apps_CarrierConfig"
+  <project name="Reixo0/android_packages_apps_CarrierConfig"
            path="packages/apps/CarrierConfig" remote="github" revision="nx809j-evo123" groups="pdk-cw-fs,pdk-fs" />
 
   <remove-project name="LineageOS/android_packages_apps_Launcher3" path="packages/apps/Launcher3" />
-  <project name="IronShing/android_packages_apps_Launcher3"
+  <project name="Reixo0/android_packages_apps_Launcher3"
            path="packages/apps/Launcher3" remote="github" revision="nx809j-evo123-1009" groups="pdk-fs,sysui-studio,pdk-cw-tvc" />
 
   <remove-project name="LineageOS/android_packages_apps_Dialer" path="packages/apps/Dialer" />
-  <project name="IronShing/android_packages_apps_Dialer"
+  <project name="Reixo0/android_packages_apps_Dialer"
            path="packages/apps/Dialer" remote="github" revision="nx809j-evo123-1009" groups="pdk-fs" />
 
   <remove-project name="LineageOS/android_packages_inputmethods_LatinIME" path="packages/inputmethods/LatinIME" />
-  <project name="IronShing/android_packages_inputmethods_LatinIME"
+  <project name="Reixo0/android_packages_inputmethods_LatinIME"
            path="packages/inputmethods/LatinIME" remote="github" revision="nx809j-evo123-1009" groups="pdk-fs" />
 </manifest>
