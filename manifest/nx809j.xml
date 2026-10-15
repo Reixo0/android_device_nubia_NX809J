@@ -20,15 +20,15 @@
 -->
 <manifest>
   <!-- Device tree (sepolicy, init, overlays, IMS graft, the patches/ + this manifest) -->
-  <project name="IronShing/android_device_nubia_NX809J"
+  <project name="Reixo0/android_device_nubia_NX809J"
            path="device/nubia/NX809J" remote="github" revision="lineage-23" />
 
   <!-- Prebuilt stock GKI kernel Image + stock DTBO (we ride the prebuilt kernel) -->
-  <project name="IronShing/android_kernel_nubia_NX809J"
+  <project name="Reixo0/android_kernel_nubia_NX809J"
            path="device/nubia/NX809J-kernel" remote="github" revision="lineage-23" />
 
   <!-- Vendor: extracted proprietary blobs (device rides the stock /vendor partition) -->
-  <project name="IronShing/android_vendor_nubia_NX809J"
+  <project name="Reixo0/android_vendor_nubia_NX809J"
            path="vendor/nubia/NX809J" remote="github" revision="lineage-23" />
 
   <!-- OPTIONAL: forks instead of patches/ (heavier; only if you don't want the
