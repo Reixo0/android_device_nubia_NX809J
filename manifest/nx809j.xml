@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+0<?xml version="1.0" encoding="UTF-8"?>
 <!--
   Local manifest — ZTE Nubia RedMagic 11 Pro (NX809J) on LineageOS 23.2.
   Canonical copy; the live one lives at .repo/local_manifests/nx809j.xml.
@@ -34,15 +34,15 @@
   <!-- OPTIONAL: forks instead of patches/ (heavier; only if you don't want the
        apply-patches.sh step). Push the listed branches first, then uncomment:
   <remove-project name="LineageOS/android_frameworks_base" />
-  <project name="IronShing/android_frameworks_base"
+  <project name="Reixo0/android_frameworks_base"
            path="frameworks/base" remote="github" revision="nx809j" />
 
   <remove-project name="LineageOS/android_vendor_lineage" />
-  <project name="IronShing/android_vendor_lineage"
+  <project name="Reixo0/android_vendor_lineage"
            path="vendor/lineage" remote="github" revision="nx809j" />
 
   <remove-project name="platform/packages/apps/CarrierConfig" />
-  <project name="IronShing/android_packages_apps_CarrierConfig"
+  <project name="Reixo0/android_packages_apps_CarrierConfig"
            path="packages/apps/CarrierConfig" remote="github" revision="nx809j-volte-41902" />
   -->
 </manifest>
