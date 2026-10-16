@@ -28,7 +28,7 @@ $(call inherit-product, device/nubia/NX809J/device.mk)
 #        Dialer.
 # The old wording here said "de-Googled", which is wrong and has already misled a reader
 # into concluding a flashed build had no GApps when it had all three packages.
-NX809J_MINIMAL ?= true
+NX809J_MINIMAL ?= false
 
 # PDF viewer: GrapheneOS PdfViewer (device/nubia/NX809J/pdfviewer) instead of Lineage Camelot,
 # which does not open PDFs on this device. The guard is honoured in vendor/lineage
